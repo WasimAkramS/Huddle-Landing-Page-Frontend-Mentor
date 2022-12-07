@@ -259,10 +259,6 @@ footer ul {
     margin-top: 1em;
 }
 
-footer > * ,
-.footer-container > *{
-    borde: 1px solid magenta;
-}
 
 /***************** Media queries ****************/
 
