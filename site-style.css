@@ -1,0 +1,352 @@
+/*********** INITIAL RESET **************/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--ff-primary);
+    
+    color: var(--clr-sec-medium);
+    line-height: 1.5;
+    min-height: 100vh;
+}
+
+img, picture {
+    max-width: 100%;
+    display: block;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*******************************************/
+
+
+/************ CUSTOM PROPERTIES ************/
+:root {
+    --ff-primary: 'Open sans';
+    --ff-secondary: 'Poppins';
+
+    --fw-normal: 400;
+    --fw-medium: 600;
+    --fw-bold: 700;
+
+    --fs-xsmall: .8rem;
+    --fs-small: .9rem;
+    --fs-medium: 1.16rem;
+    --fs-large: 1.2rem;
+    --fs-xlarge: 1.7rem;
+
+    --clr-primary: hsl(322, 100%, 66%);
+    --clr-sec-light: hsl(193, 100%, 96%);
+    --clr-sec-medium: hsl(208, 11%, 55%);
+    --clr-sec-dark: hsl(192, 100%, 9%);
+}
+/*********************************************/
+
+
+/************** Typography *******************/
+
+.xlarge-font {
+    font-size: var(--fs-xlarge);
+}
+
+.large-font {
+    font-size: var(--fs-large);
+}
+
+.medium-font {
+    font-size: var(--fs-medium)
+}
+
+.small-font {
+    font-size: var(--fs-small);
+}
+
+.xsmall-font {
+    font-size: var(--fs-xsmall);
+}
+
+h1, h2 {
+    font-family: var(--ff-secondary);
+}
+
+.primary-clr {
+    color: var(--clr-primary);
+}
+
+.sec-medium-clr {
+    color: var(--clr-sec-medium);
+}
+
+.sec-light-clr {
+    color: var(--clr-sec-light);
+}
+
+.sec-dark-clr {
+    color: var(--clr-sec-dark);
+}
+
+/********************************************/
+
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    width: 90%;
+    text-align: center;
+    padding: 2em 4em;
+    margin-bottom: 2em;
+    border-radius: .5em;
+    box-shadow: 0px 0px 5px var(--clr-sec-medium);
+}
+
+header.flex {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2em;
+}
+
+header .logo {
+    max-width: 40%;
+    width: 190px;
+    align-self: center;
+}
+
+.hero {
+    min-height: 100vh;
+    background-image: url("images/bg-hero-mobile.svg");
+    background-color: var(--clr-sec-light);
+    padding: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+}
+
+.hero .left {
+    margin-bottom: 2em;
+}
+
+button {
+    color: white;
+    padding: 1em 3em;
+    margin: 1em 0 .5em 0;
+    background-color: var(--clr-primary);
+    border-radius: 2em;
+    border: none;
+}
+
+header .white-btn {
+    padding: .7em 2.125em;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px var(--clr-sec-medium);
+}
+
+p {
+    padding-block: .5em;
+}
+
+.button-card {
+    width: 95%;
+    position: relative;
+    top: 160px;
+    margin-top: -4em;
+    padding-inline: 1.3em;
+    background: white;
+}
+
+.card-container {
+     margin-bottom: 2em;
+}
+
+.card-container .card--background {
+    order: -1;
+    padding-bottom: 3em;
+    max-width: 300px;
+}
+
+/*
+.footer-container.flex {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    color: white;
+    padding: 9em 2em 5em 2em;
+    background-color: var(--clr-sec-dark);
+    borde: 2px solid magenta;
+}
+
+footer ul {
+    align-slf: flex-start;
+    list-style: none;
+    padding: 0;
+    paddig: 1em 0 1em .5em;
+    borde: 2px solid magenta;
+}
+
+footer li {
+    padding: .5em;
+}
+
+
+address.flex .address::before {
+    content: url("images/icon-location.svg");
+    padding-right: 1em;
+}
+
+address.flex li.phone::before {
+    content: url("images/icon-phone.svg");
+    padding-right: 1em;
+}
+
+address.flex li.mail::before {
+    content: url("images/icon-email.svg");
+    padding-right: 1em;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.social-icons img {
+    background-color: white;
+}
+*/
+
+button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.footer-container {
+    display: grid;
+    gap: 2em;
+    justify-content: flex-start;
+
+    list-style: none;
+    color: white;
+}
+
+footer {
+    background: var(--clr-sec-dark);
+    padding: 10em 2em 0em 2em;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: .5em;
+}
+
+footer ul {
+    list-style: none;
+}
+
+.copy-right {
+    text-align: center;
+    margin-top: 1em;
+}
+
+footer > * ,
+.footer-container > *{
+    borde: 1px solid magenta;
+}
+
+/***************** Media queries ****************/
+
+@media(min-width: 37.5em){
+    .card.flex {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        column-ga: 10em;
+        align-items: flex-start;
+        justify-ontent: space-evenly;
+    }
+
+    .button-card {
+        width: 50%;
+    }
+
+    .card--content {
+        width: 52%;
+    }
+
+    .card--background {
+        width: 35%;
+    }
+ 
+    div.card-container > section:nth-of-type(2) .card--background {
+        order: 1;
+    }
+}
+
+@media(min-width: 47.1em) {
+    :root {
+        --fs-xsmall: .8rem;
+        --fs-small: .9rem;
+        --fs-medium: 1.30rem;
+        --fs-large: 1.3rem;
+        --fs-xlarge: 1.66rem;
+        }
+
+        .hero .flex{
+            flex-direction: row;
+            text-align: left;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+
+        .hero .left {
+            width: 43%;
+        }
+        
+        .hero .right {
+            width: 50%;
+        }
+
+        .footer-container {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
+
+@media(min-width: 58.9em) {
+        :root {
+            --fs-xsmall: 1rem;
+            --fs-small: 1.1rem;
+            --fs-medium: 1.4rem;
+            --fs-large: 1.5rem;
+            --fs-xlarge: 2rem;
+            }
+        }
+
+@media(min-width: 76.375em) {
+    :root {
+        --fs-xsmall: 1.1rem;
+        --fs-small: 1.2rem;
+        --fs-medium: 1.6rem;
+        --fs-large: 1.7rem;
+        --fs-xlarge: 2.6rem;
+        }
+
+    .card.flex {
+        width: 80%;
+    }
+    }
